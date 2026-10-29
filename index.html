@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wanderlight — a visual journal of quiet corners, faraway places, and beautiful moments.">
+  <title>Wanderlight — A Little Gallery of Everywhere</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <a href="#" class="brand">wanderlight<span>.</span></a>
+
+      <div class="hero-copy">
+        <h1>beautiful<span>.</span></h1>
+        <p>
+          A visual journal of quiet corners, faraway places, and the light in<br class="desktop-break">
+          between. Take your time and find a place to linger.
+        </p>
+      </div>
+
+      <div class="hero-note">
+        <span class="sun-symbol">✳</span>
+        <span>COLLECTED<br>WITH CURIOSITY</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="journal" id="gallery">
+    <div class="journal-inner">
+
+      <div class="section-top">
+        <div>
+          <span class="eyebrow">THE PHOTO JOURNAL</span>
+          <h2>A few favorite views<span>.</span></h2>
+        </div>
+        <span class="photo-count" id="photoCount">12 PHOTOS</span>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter photographs">
+        <button class="filter active" data-category="all" aria-pressed="true">All places</button>
+        <button class="filter" data-category="nature" aria-pressed="false">Nature</button>
+        <button class="filter" data-category="coast" aria-pressed="false">Coast</button>
+        <button class="filter" data-category="architecture" aria-pressed="false">Architecture</button>
+        <button class="filter" data-category="city" aria-pressed="false">City life</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>No photographs here just yet.</h3>
+        <p>Try another collection to discover more places.</p>
+        <button id="resetButton">Explore all places</button>
+      </div>
+
+      <div class="journal-bottom">
+        <span>END OF THIS LITTLE COLLECTION</span>
+        <span>TAKE A MOMENT. LOOK A LITTLE CLOSER. ✳</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="footer-brand">wanderlight<span>.</span></a>
+    <p>Somewhere between here and beautiful.</p>
+    <span>MADE WITH CURIOSITY · 2026</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-button" id="closeButton" aria-label="Close preview">×</button>
+    <button class="lightbox-arrow previous" id="previousButton" aria-label="Previous photo">‹</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption">
+        <div>
+          <span id="lightboxCategory"></span>
+          <h3 id="lightboxTitle"></h3>
+        </div>
+        <span id="lightboxNumber"></span>
+      </div>
+    </div>
+
+    <button class="lightbox-arrow next" id="nextButton" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
